@@ -1,0 +1,9 @@
+.submit{
+    background-color: orangered;
+    color: white;
+    font-weight:bold ;
+    border:2px solid orangered;
+    padding: 5px;
+    border-radius:3px ;
+    cursor: pointer;
+}

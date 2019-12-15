@@ -1,0 +1,68 @@
+<body>
+<div class="content" style="padding-left: 200px">
+  <ul>
+    <li><a routerLink="/search">Search Vehicle</a></li>
+  </ul>
+</div>
+<br>
+<div id="search">
+  <mat-form-field>
+    <input matInput  placeholder="Enter plate number" [(ngModel)]="plateNumber">
+  </mat-form-field>
+</div>
+<br>
+<small style="color: green;text-align: center;padding-left: 660px">Available Vehicles</small>
+<p>Cars</p>
+<div style="text-align: center;margin-left: 490px;">
+<table><thead></thead>
+  <tr>
+    <th>Plate Number</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Color</th>
+    <th>Capacity</th>
+    <th>Transmission</th>
+    <th>Fuel Type</th>
+  </tr>
+
+  <tbody>
+  <tr *ngFor="let car of cars | plateNumberCarFilter:plateNumber">
+    <td>{{car.plateNumber}}</td>
+    <td>{{car.make}}</td>
+    <td>{{car.model}}</td>
+    <td>{{car.color}}</td>
+    <td>{{car.capacity}}</td>
+    <td>{{car.transmission}}</td>
+    <td>{{car.fuelType}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<p>Motorbikes</p>
+<div style="text-align: center;margin-left: 490px;">
+<table>
+  <thead></thead>
+  <tr>
+    <th>Plate Number</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Color</th>
+    <th>Capacity</th>
+    <th>Transmission</th>
+    <th>Fuel Type</th>
+  </tr>
+
+  <tbody>
+  <tr *ngFor="let motorbike of motorbikes | plateNumberMotorbikeFilter:plateNumber">
+    <td>{{motorbike.plateNumber}}</td>
+    <td>{{motorbike.make}}</td>
+    <td>{{motorbike.model}}</td>
+    <td>{{motorbike.color}}</td>
+    <td>{{motorbike.capacity}}</td>
+    <td>{{motorbike.transmission}}</td>
+    <td>{{motorbike.fuelType}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</body>

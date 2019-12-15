@@ -1,0 +1,24 @@
+<body>
+<br><br><br><br>
+<div class="content">
+  <div id="vertical"></div>
+  <ul>
+    <li><a routerLink="/loginSignUp-home/search">Search Vehicle</a></li>
+    <li><a routerLink="/loginSignUp-home/viewVehicles">View all Vehicles</a></li>
+  </ul>
+</div>
+<br>
+<div id="search">
+  <br><br><br>
+  <form>
+    <input id="searchBar" type="text" value="{{plateNumber}}" placeholder="Enter the plate number">
+    <br><br>
+    <b style="color: black"> Pick up Date:</b>
+    <input type="date" value="{{pickUpDate}}">
+    <b style="color: black"> Drop off Date:</b>
+    <input type="date" value="{{dropOffDate}}">
+    <br><br><br>
+    <button>Search</button>
+  </form>
+</div>
+</body>

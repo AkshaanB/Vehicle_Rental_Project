@@ -1,0 +1,39 @@
+<body>
+<h1 style="text-align: center;">Cars</h1>
+<small style="color: green;">*This table contains all the available vehicles*</small><br><br>
+<mat-form-field>
+  <input matInput  placeholder="Filter by Make" [(ngModel)]="search">
+</mat-form-field><br>
+<div style="text-align: center;margin-left: 360px;">
+<table border="1">
+    <thead></thead>
+    <tr>
+      <th>Plate Number</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Color</th>
+      <th>Capacity</th>
+      <th>Transmission</th>
+      <th>Fuel Type</th>
+      <th>No of Seats</th>
+      <th>Hybrid Status</th>
+      <th>Book Vehicle</th>
+    </tr>
+  
+    <tbody>
+        <tr *ngFor="let car of cars | makeFilterCar:search">
+            <td>{{car.plateNumber}}</td>
+            <td>{{car.make}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.color}}</td>
+            <td>{{car.capacity}}</td>
+            <td>{{car.transmission}}</td>
+            <td>{{car.fuelType}}</td>
+            <td>{{car.noOfSeats}}</td>
+            <td>{{car.hybridStatus}}</td>
+            <td><button id="book" [routerLink]="['/booking', car.plateNumber]">Book Vehicle</button></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+</body>

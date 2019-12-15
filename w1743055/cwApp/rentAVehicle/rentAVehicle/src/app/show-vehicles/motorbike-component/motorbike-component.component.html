@@ -1,0 +1,37 @@
+<body>
+<h1 style="text-align: center;">Motorbikes</h1>
+<small style="color: green;">*This table contains all the available vehicles*</small><br><br>
+<mat-form-field>
+  <input matInput  placeholder="Filter by Make" [(ngModel)]="search">
+</mat-form-field><br>
+<div style="text-align: center;margin-left: 400px;">
+    <table border="1" style="width: 100%;" style="text-align: center;">
+        <thead></thead>
+        <tr>
+          <th>Plate Number</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Color</th>
+          <th>Capacity</th>
+          <th>Transmission</th>
+          <th>Fuel Type</th>
+          <th>Bike Type</th>
+          <th>Book Vehicle</th>
+        </tr>
+      
+        <tbody>
+            <tr *ngFor="let motorbike of motorbikes | makeFilterMotorbike:search">
+                <td [(ngModel)]="motorbikePlateNumber">{{motorbike.plateNumber}}</td>
+                <td>{{motorbike.make}}</td>
+                <td>{{motorbike.model}}</td>
+                <td>{{motorbike.color}}</td>
+                <td>{{motorbike.capacity}}</td>
+                <td>{{motorbike.transmission}}</td>
+                <td>{{motorbike.fuelType}}</td>
+                <td>{{motorbike.bikeType}}</td>
+                <td><button id="book" [routerLink]="['/booking', motorbike.plateNumber]">Book Vehicle</button></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    </body>

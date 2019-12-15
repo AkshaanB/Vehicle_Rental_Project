@@ -1,0 +1,23 @@
+<body style="padding: 0px;margin: 0px;">
+<h2 style="text-align: center;">Book the Vehicle</h2>
+<br>
+<form #bookingForm="ngForm" (ngSubmit)="onSubmit()">
+<b><p style="text-align: center;">Plate Number : <input style="text-align: center;" type="text" name="plateNumber" value="{{plateNumber}}" readonly/></p></b>
+<div style="text-align: center;">
+<small style="color: red;">*All data is required*</small><br>
+<mat-form-field>
+    <input matInput type="email" placeholder="Enter email address" [(ngModel)]="booking.email" name="email" required/>
+</mat-form-field><br>
+<mat-form-field>
+    <input matInput type="text" #nic = "ngModel" pattern="^\d{12}$" [class.is-invalid] = "nic.invalid && nic.touched" class="form-control" placeholder="Enter NIC"  [(ngModel)]="booking.nic" name="nic" required/>
+</mat-form-field><br><br>
+<mat-form-field>
+    <input matInput type="date" placeholder="Enter expected pickup date" [(ngModel)]="booking.pickUpdate" name="pickupDate" required/>
+</mat-form-field><br><br>
+<mat-form-field>
+    <input matInput type="date" placeholder="Enter expected pickup date" [(ngModel)]="booking.dropOffDate" name="dropoffdate" required/>
+</mat-form-field><br><br>
+    <button class="submit" [disabled]="bookingForm.form.invalid">Book</button><br><br><button class="submit"type="reset">Clear Details</button>
+</div>
+</form>
+</body>

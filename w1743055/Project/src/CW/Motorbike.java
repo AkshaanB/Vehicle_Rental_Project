@@ -1,0 +1,71 @@
+package CW;
+
+import java.util.Objects;
+public class Motorbike extends Vehicle {
+    private String startType;
+    private String bikeType;
+
+    public Motorbike(String plateNumber, String make, String model, String color, String capacity, String transmission, String fuelType, int yearOfProduction, String startType, String bikeType) {
+        super(plateNumber, make, model, color, capacity, transmission, fuelType, yearOfProduction);
+        this.startType = startType;
+        this.bikeType = bikeType;
+    }
+
+    public Motorbike(String plateNumber, String make, String model, String color, String capacity, String transmission, String fuelType, int yearOfProduction, Schedule bookVehicle, String startType, String bikeType) {
+        super(plateNumber, make, model, color, capacity, transmission, fuelType, yearOfProduction, bookVehicle);
+        this.startType = startType;
+        this.bikeType = bikeType;
+    }
+
+    public Motorbike(String plateNumber, String make, String model, String color, String capacity, String transmission, String fuelType, Schedule pickUpDropOff, int yearOfProduction, String startType, String bikeType) {
+        super(plateNumber, make, model, color, capacity, transmission, fuelType, pickUpDropOff, yearOfProduction);
+        this.startType = startType;
+        this.bikeType = bikeType;
+    }
+
+    //no setters because all the states are unique for motorbike
+
+    public String getStartType() {
+        return startType;
+    }
+
+    public String getBikeType() {
+        return bikeType;
+    }
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Motorbike motorbike = (Motorbike) o;
+        return startType.equals(motorbike.startType) &&
+                bikeType.equals(motorbike.bikeType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), startType, bikeType);
+    }
+
+    @Override
+    public String toString() {
+        return "Motorbike{" +
+                "plateNumber='" + plateNumber + '\'' +
+                ", make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", capacity='" + capacity + '\'' +
+                ", transmission='" + transmission + '\'' +
+                ", fuelType='" + fuelType + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", bookVehicle=" + bookVehicle +
+                ", pickUpDropOff=" + pickUpDropOff +
+                ", startType='" + startType +
+                ", bikeType='" + bikeType +
+                '}';
+    }
+}
+

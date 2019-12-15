@@ -1,0 +1,50 @@
+button{
+  background: orangered;
+  color: white;
+  font-weight: bold;
+  border: orangered;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  width: 120px;
+}
+.buttons{
+  text-align: right;
+}
+.content{
+  background: orangered;
+  padding: 20px;
+  margin-left:300px ;
+  margin-right: 300px;
+  padding-left:210px ;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+}
+.content ul li{
+  list-style-type: none;
+  float: left;
+  width: 365px;
+  text-align: center;
+}
+.content ul li a{
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+#vertical{
+  border-left: 1px solid white;
+  height: 50px;
+  position:absolute;
+  left: 50%;
+}
+
+#div1{
+  position: relative;
+}
+.div{
+color: black;
+}

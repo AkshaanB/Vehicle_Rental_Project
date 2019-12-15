@@ -1,0 +1,15 @@
+.div1{
+    text-align: center;
+    padding: 10px;
+    margin-top: 80px;
+    margin-left: 500px;
+    margin-right: 500px;
+    background: white;
+    color: black;
+  }
+  #service{
+      font-size: 30px;
+      color: orangered;
+      font-weight: bold;
+      font-family: cursive;
+  }

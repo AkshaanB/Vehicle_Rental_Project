@@ -1,0 +1,51 @@
+<div style="overflow: auto;">
+<div class="table">
+    <mat-table [dataSource] = "Data">
+        <mat-header-row *matHeaderRowDef = "Columns"></mat-header-row>
+        <mat-row *matRowDef = "let row; columns:Columns;"></mat-row>
+        <ng-container matColumnDef="Plate Number">
+                <mat-header-cell *matHeaderCellDef>Plate Number</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    {{element.plateNumber}}
+                </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Make">
+                <mat-header-cell *matHeaderCellDef>Make</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    {{element.make}}
+                </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Model">
+            <mat-header-cell *matHeaderCellDef>Model</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                {{element.model}}
+            </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Color">
+        <mat-header-cell *matHeaderCellDef>Color</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+            {{element.color}}
+        </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Capacity">
+        <mat-header-cell *matHeaderCellDef>Capacity</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+            {{element.capacity}}
+        </mat-cell>
+    </ng-container>
+        <ng-container matColumnDef="Transmission">
+                <mat-header-cell *matHeaderCellDef>Transmission</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    {{element.transmission}}
+                </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Fuel Type">
+                <mat-header-cell *matHeaderCellDef>Fuel Type</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    {{element.fuelType}}
+                </mat-cell>
+        </ng-container>
+        
+    </mat-table>
+</div>
+</div>
